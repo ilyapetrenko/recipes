@@ -82,7 +82,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onRequestClo
                 Weight:
                 <input type="text" name="weight" value={product.weight} onChange={handleInputChange} />
             </label>
-            <button onClick={() => console.log(product)}>Confirm</button>
+            <button onClick={() => console.log(product) //Here must be a function that will do post request with product
+                 }>Confirm</button>
         </Modal>
     )
 }
