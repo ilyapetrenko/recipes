@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IProduct } from '../../models/models'
+import { IRecipe } from '../../models/models'
 
 export const productApi = createApi({
     reducerPath: 'product/api',
@@ -7,8 +7,8 @@ export const productApi = createApi({
         baseUrl: 'http://localhost:3001/'
     }),
     endpoints: (build) => ({
-        searchProducts: build.query<IProduct[], void>({
-            query: () => 'products' // Обратите внимание, что здесь используется 'products' вместо 'db'
+        searchProducts: build.query<IRecipe[], void>({
+            query: () => 'recipes'
         })
     })
 })

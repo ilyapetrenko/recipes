@@ -1,9 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-    return(
-        <header className="p-4 text-xl text-gray-500 sm:text-center dark:text-gray-400 bg-white shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-600">
-            Online Shop
+    return (
+        <header className="p-4 text-xl justify-between text-gray-300 flex text-center bg-black md:p-6">
+            Let's Cook Together!
+            <div className="flex gap-5">
+                <Link to="/" className="underline hover:no-underline">
+                    Home
+                </Link>
+                <Link to="/favourites" className="underline hover:no-underline">
+                    Favourites
+                </Link>
+            </div>
         </header>
-    )
-}
+    );
+};

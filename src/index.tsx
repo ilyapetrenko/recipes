@@ -6,16 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {store} from "./store";
 import {Header} from "./components/Header";
-import {Footer} from "./components/Footer";
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <Provider store={store}>
+      <BrowserRouter>
       <Header/>
       <App/>
-      <Footer/>
+      </BrowserRouter>
   </Provider>
 );
 
