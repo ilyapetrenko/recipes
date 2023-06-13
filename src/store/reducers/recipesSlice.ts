@@ -13,7 +13,7 @@ const initialState: RecipeState = {
     filteredRecipes: [],
 };
 
-export const productSlice = createSlice({
+export const recipesSlice = createSlice({
     name: 'recipe',
     initialState,
     reducers: {
@@ -41,5 +41,5 @@ export const productSlice = createSlice({
     },
 });
 
-export const productActions = productSlice.actions;
-export const productReducer = productSlice.reducer;
+export const productActions = recipesSlice.actions;
+export const productReducer = recipesSlice.reducer;

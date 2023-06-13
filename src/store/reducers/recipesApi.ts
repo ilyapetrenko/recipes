@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { IRecipe } from '../../models/models'
 
-export const productApi = createApi({
+export const recipesApi = createApi({
     reducerPath: 'product/api',
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:3001/'
@@ -13,4 +13,4 @@ export const productApi = createApi({
     })
 })
 
-export const { useSearchProductsQuery } = productApi
+export const { useSearchProductsQuery } = recipesApi

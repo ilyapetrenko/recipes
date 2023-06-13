@@ -1,5 +1,5 @@
 import React from "react";
-import { useSearchProductsQuery } from "../store/reducers/productApi";
+import { useSearchProductsQuery } from "../store/reducers/recipesApi";
 import { IRecipe } from "../models/models";
 import { Recipe } from "./Recipe";
 import { useAppSelector } from "../hooks/selector";
@@ -9,7 +9,6 @@ import {WorkSpace} from "./WorkSpace";
 
 export const RecipesList = () => {
     const { data: recipes, isLoading, isError } = useSearchProductsQuery();
-    const currentRecipes: IRecipe[] | null = useAppSelector((state) => state.products.allRecipes);
     const favouriteRecipes: IRecipe[] | null = useAppSelector((state) => state.products.favoriteRecipes);
     const filteredRecipes: IRecipe[] | null = useAppSelector((state) => state.products.filteredRecipes);
     const { addRecipe, deleteRecipe, fetchAllRecipes, filterRecipes } = useActions();

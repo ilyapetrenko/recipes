@@ -10,7 +10,7 @@ export const RecipeCard = () => {
     const recipe = allRecipes.find((recipe) => recipe.id === Number(id));
 
     if (!recipe) {
-        return <div>Рецепт не найден</div>;
+        return <div>Recipe not found</div>;
     }
 
     return (
